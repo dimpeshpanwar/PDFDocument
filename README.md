@@ -3,6 +3,6 @@
 </a>
 
 ## Contributers
-<a href="https://github.com/dimpeshpanwar/PDFDocument">
+<a href="https://github.com/dimpeshpanwar/PDFDocument/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=dimpeshpanwar/PDFDocument" />
 </a>
