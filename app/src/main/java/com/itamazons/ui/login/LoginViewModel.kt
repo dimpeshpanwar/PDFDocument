@@ -1,13 +1,15 @@
-package com.sample.scopedstorage.activities.ui.login
+package com.itamazons.ui.login
 
+import com.itamazons.domain.repositories.LoginRepository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import com.sample.scopedstorage.activities.data.LoginRepository
+import com.itamazons.pdfdocument.R
 import com.sample.scopedstorage.activities.data.Result
 
-import com.sample.scopedstorage.activities.R
+import com.sample.scopedstorage.activities.ui.login.LoginFormState
+import com.sample.scopedstorage.activities.ui.login.LoginResult
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 
