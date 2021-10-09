@@ -1,6 +1,5 @@
-package com.sample.scopedstorage.activities.ui.login
+package com.itamazons.ui.login
 
-import android.app.Activity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -12,9 +11,9 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
-import com.sample.scopedstorage.activities.databinding.ActivityLoginBinding
+import com.itamazons.pdfdocument.R
+import com.itamazons.pdfdocument.databinding.ActivityLoginBinding
 
-import com.sample.scopedstorage.activities.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -59,7 +58,7 @@ class LoginActivity : AppCompatActivity() {
             if (loginResult.success != null) {
                 updateUiWithUser(loginResult.success)
             }
-            setResult(Activity.RESULT_OK)
+            setResult(RESULT_OK)
 
             //Complete and destroy login activity once successful
             finish()
