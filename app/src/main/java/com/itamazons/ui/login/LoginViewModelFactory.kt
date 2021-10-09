@@ -1,9 +1,9 @@
-package com.sample.scopedstorage.activities.ui.login
+package com.itamazons.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.sample.scopedstorage.activities.data.LoginDataSource
-import com.sample.scopedstorage.activities.data.LoginRepository
+import com.itamazons.data.LoginRepositoryImp
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.
@@ -15,7 +15,7 @@ class LoginViewModelFactory : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
             return LoginViewModel(
-                loginRepository = LoginRepository(
+                loginRepository = LoginRepositoryImp(
                     dataSource = LoginDataSource()
                 )
             ) as T
