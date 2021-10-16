@@ -1,4 +1,4 @@
-package com.sample.scopedstorage.activities.ui.login
+package com.itamazons.ui.login
 
 /**
  * User details post authentication that is exposed to the UI

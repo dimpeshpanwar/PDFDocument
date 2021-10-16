@@ -1,5 +1,8 @@
-package com.sample.scopedstorage.activities.data
+package com.itamazons.data
 
+import com.itamazons.domain.repositories.LoginRepository
+import com.sample.scopedstorage.activities.data.LoginDataSource
+import com.sample.scopedstorage.activities.data.Result
 import com.sample.scopedstorage.activities.data.model.LoggedInUser
 
 /**
@@ -7,11 +10,11 @@ import com.sample.scopedstorage.activities.data.model.LoggedInUser
  * maintains an in-memory cache of login status and user credentials information.
  */
 
-class LoginRepository(val dataSource: LoginDataSource) {
+class LoginRepositoryImp(val dataSource: LoginDataSource): LoginRepository {
 
     // in-memory cache of the loggedInUser object
-    var user: LoggedInUser? = null
-        private set
+    override var user: LoggedInUser? = null
+        set
 
     val isLoggedIn: Boolean
         get() = user != null
@@ -22,12 +25,12 @@ class LoginRepository(val dataSource: LoginDataSource) {
         user = null
     }
 
-    fun logout() {
+    override fun logout() {
         user = null
         dataSource.logout()
     }
 
-    fun login(username: String, password: String): Result<LoggedInUser> {
+    override fun login(username: String, password: String): Result<LoggedInUser> {
         // handle login
         val result = dataSource.login(username, password)
 
